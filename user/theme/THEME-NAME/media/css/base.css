@@ -7,7 +7,7 @@ body {
 
 a {
   color: ;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -16,7 +16,7 @@ a:visited {
 
 a:hover {
   color: ;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 

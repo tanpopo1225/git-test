@@ -63,22 +63,22 @@ user/
 |    |-- THEME-NAME/media/
 |        |-- css/
 |            |-- core/
-|            |   |-- \_settings.scss
-|            |   |-- \_core.scss
-|            |   |-- \_grid.scss
-|            |   |-- \_pc-grid.scss
+|            |   |-- _settings.scss
+|            |   |-- _core.scss
+|            |   |-- _grid.scss
+|            |   |-- _pc-grid.scss
 |            |
 |            |-- layout/
-|            |   |-- \_cms.scss
-|            |   |-- \_base.scss
-|            |   |-- \_layout.scss
+|            |   |-- _cms.scss
+|            |   |-- _base.scss
+|            |   |-- _layout.scss
 |            |
 |            |-- module/
-|            |   |-- \_module01.scss
+|            |   |-- _module01.scss
 |            |   |-- ...
 |            |
 |            |-- style/
-|            |   |-- \_style.scss
+|            |   |-- _style.scss
 |            |
 |            |-- master.css
 ```
