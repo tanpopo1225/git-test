@@ -63,6 +63,7 @@ user/
 |    |-- THEME-NAME/media/
 |        |-- css/
 |            |-- core/
+|            |   |-- _config.rb
 |            |   |-- _settings.scss
 |            |   |-- _core.scss
 |            |   |-- _grid.scss
@@ -85,9 +86,10 @@ user/
 
 
 ### ディレクトリ説明
-レイヤー型のCSS設計を用いているので、  
 - core  
+編集してはいけないファイルは基本ここに配置
 
+- layout
 
 ### ファイル説明
 [no-edit] = 原則編集禁止
@@ -112,6 +114,8 @@ LightCMS（のみ）に必須の設定
 - style.css  
 その他のスタイル
 
+- \_settings.scss
+sassの変数に対する設定を記述する
 
 ## 参考資料
 ####CSS [core.css]
