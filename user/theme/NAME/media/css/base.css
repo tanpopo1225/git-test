@@ -1,0 +1,24 @@
+body {
+  color: #333;
+  font-size: 12px;
+  font-family: "游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック ProN","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: ;
+  text-decoration: none;
+}
+
+a:hover {
+  color: ;
+  text-decoration: underline;
+}
+
+/*  静的サイトの場足以下全文消去
+=========================================================================*/
+@media and (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
