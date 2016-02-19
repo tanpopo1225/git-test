@@ -27,6 +27,7 @@ http://developers.linecorp.com/blog/?p=1027
 
 ## ファイル構造
 ####CSSのみ
+```
 user/  
 |  
 | -- theme/  
@@ -50,10 +51,12 @@ user/
 |            |   |-- style.css  
 |            |  
 |            |-- import.css  
+```
 
 ####Sassを導入した場合
 master.cssへ出力  
 
+```
 user/  
 |  
 | -- theme/  
@@ -78,6 +81,7 @@ user/
 |            |   |-- \_style.scss  
 |            |  
 |            |-- master.css  
+```
 
 
 ## ディレクトリ説明
