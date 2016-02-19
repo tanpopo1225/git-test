@@ -28,59 +28,59 @@ http://developers.linecorp.com/blog/?p=1027
 ## ファイル構造
 ####CSSのみ
 ```
-user/  
-|  
-| -- theme/  
-|    |-- THEME-NAME/media/  
-|        |-- css/  
-|            |-- core/  
-|            |   |-- core.css  
-|            |   |-- grid.css  
-|            |   |-- pc-grid.css  
-|            |  
-|            |-- layout/  
-|            |   |-- cms.css  
-|            |   |-- base.css  
-|            |   |-- layout.css  
-|            |  
-|            |-- module/  
-|            |   |-- module01.css  
-|            |   |-- ...  
-|            |  
-|            |-- style/  
-|            |   |-- style.css  
-|            |  
-|            |-- import.css  
+user/
+|
+| -- theme/
+|    |-- THEME-NAME/media/
+|        |-- css/
+|            |-- core/
+|            |   |-- core.css
+|            |   |-- grid.css
+|            |   |-- pc-grid.css
+|            |
+|            |-- layout/
+|            |   |-- cms.css
+|            |   |-- base.css
+|            |   |-- layout.css
+|            |
+|            |-- module/
+|            |   |-- module01.css
+|            |   |-- ...
+|            |
+|            |-- style/
+|            |   |-- style.css
+|            |
+|            |-- import.css
 ```
 
 ####Sassを導入した場合
 master.cssへ出力  
 
 ```
-user/  
-|  
-| -- theme/  
-|    |-- THEME-NAME/media/  
-|        |-- css/  
-|            |-- core/  
-|            |   |-- \_settings.scss  
-|            |   |-- \_core.scss  
-|            |   |-- \_grid.scss  
-|            |   |-- \_pc-grid.scss  
-|            |  
-|            |-- layout/  
-|            |   |-- \_cms.scss  
-|            |   |-- \_base.scss  
-|            |   |-- \_layout.scss  
-|            |  
-|            |-- module/  
-|            |   |-- \_module01.scss  
-|            |   |-- ...  
-|            |  
-|            |-- style/  
-|            |   |-- \_style.scss  
-|            |  
-|            |-- master.css  
+user/
+|
+| -- theme/
+|    |-- THEME-NAME/media/
+|        |-- css/
+|            |-- core/
+|            |   |-- \_settings.scss
+|            |   |-- \_core.scss
+|            |   |-- \_grid.scss
+|            |   |-- \_pc-grid.scss
+|            |
+|            |-- layout/
+|            |   |-- \_cms.scss
+|            |   |-- \_base.scss
+|            |   |-- \_layout.scss
+|            |
+|            |-- module/
+|            |   |-- \_module01.scss
+|            |   |-- ...
+|            |
+|            |-- style/
+|            |   |-- \_style.scss
+|            |
+|            |-- master.css
 ```
 
 
