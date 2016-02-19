@@ -10,10 +10,15 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: ;
+}
+
 a:hover {
   color: ;
   text-decoration: underline;
 }
+
 
 /*  静的サイトの場足以下全文消去
 =========================================================================*/
