@@ -3,6 +3,7 @@
   display: block;
   position: relative;
 }
+
 .img-cover img {
   position: absolute;
   top: -10000%;
