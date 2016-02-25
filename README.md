@@ -26,35 +26,7 @@ http://developers.linecorp.com/blog/?p=1027
 
 
 ### ファイル構造
-###### CSSのみ
-```
-user/
-|
-| -- theme/
-|    |-- THEME-NAME/media/
-|        |-- css/
-|            |-- core/
-|            |   |-- core.css
-|            |   |-- grid.css
-|            |   |-- pc-grid.css
-|            |
-|            |-- layout/
-|            |   |-- cms.css
-|            |   |-- base.css
-|            |   |-- layout.css
-|            |
-|            |-- module/
-|            |   |-- module01.css
-|            |   |-- ...
-|            |
-|            |-- style/
-|            |   |-- style.css
-|            |
-|            |-- import.css
-```
-
-###### Sassを導入した場合
-master.cssへ出力  
+import.cssへ出力（CMS設計上の理由）  
 
 ```
 user/
@@ -104,7 +76,8 @@ Sassでは、cssとして吐き出す記述やファイルを選択できるの�
 なおmoduleの役割上、個々のファイルのみで自己完結出来るよう他の要素（core.scssのリセットを除く）に影響されない書き方にするのを必須とします。
 
 ### ファイル説明
-[no-edit] = 原則編集禁止
+*[no-edit] = 原則編集禁止*
+*_ファイル名.scss = パーシャルファイル（CSSとしては吐き出されない、SCSSのimportで読み込むファイル。）*
 
 ###### core.css [no-edit]  
 リセットやノーマライズを適用する。
