@@ -54,7 +54,7 @@ user/
 |        |
 |        |
 |        |-- css/
-|            |-- master.css
+|            |-- import.css
 ```
 
 

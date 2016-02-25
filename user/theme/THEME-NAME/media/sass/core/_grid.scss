@@ -1,0 +1,7 @@
+//
+// グリッドシステム
+// --------------------------------------------------
+.container {
+  @media (min-width: $screen-pc-min) {
+    width: $container-pc;
+}

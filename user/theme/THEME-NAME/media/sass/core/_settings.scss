@@ -3,7 +3,18 @@
 // --------------------------------------------------
 
 
-//== プレークポイント
-$screen-sm-min: 768px;
+// プレークポイント
+$screen-tb: 480px;
+$screen-pc: 768px;
 
-$screen-md-min: 992px;
+$screen-tb-min: $screen-tb !default;
+$screen-pc-min: $screen-pc !default;
+$screen-sp-max: ($screen-tb - 1) !default;
+$screen-tb-max: ($screen-pc - 1) !default;
+
+// グリッドシステムカラムのそれぞれの間の余白
+$grid-gutter-width: 20px !default;
+
+
+// コンテナサイズ
+$container-pc:            (720px + $grid-gutter-width) !default;
