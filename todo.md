@@ -3,6 +3,7 @@
 ## 情報共有
 
 - 一旦CSS版は廃止し、Sass版のみの作成とします。
+- Sass環境を整える方法を軽くGithubのWikiに書いてみました。[link](https://github.com/neocryses/s3-template/wiki/Sass%E7%92%B0%E5%A2%83%E3%82%92%E6%95%B4%E3%81%88%E3%82%8B "Sass環境を整える")
 
 ## 議題
 
