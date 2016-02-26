@@ -21,7 +21,7 @@ SMACSSを参考
 http://03log.me/blog/2014-09-30-smacss.html  
 http://chroma.hatenablog.com/entry/2013/07/22/120818  
 
-Sass導入も念頭に置いた構成  
+Sass導入を念頭に置いた構成  
 http://developers.linecorp.com/blog/?p=1027  
 
 
@@ -31,9 +31,10 @@ import.cssへ出力（CMS設計上の理由）
 ```
 user/
 |
-| -- theme/
-|    |-- THEME-NAME/media/
+| -- theme/THEME-NAME/
+|    |-- media/
 |        |-- sass/
+|        |   |-- import.scss
 |        |   |-- core/
 |        |   |   |-- _settings.scss
 |        |   |   |-- _core.scss
@@ -78,6 +79,9 @@ Sassでは、cssとして吐き出す記述やファイルを選択できるの�
 ### ファイル説明
 *[no-edit] = 原則編集禁止*
 *_ファイル名.scss = パーシャルファイル（CSSとしては吐き出されない、SCSSのimportで読み込むファイル。）*
+
+###### _settings.scss
+グリッド幅や変数の設定
 
 ###### core.css [no-edit]  
 リセットやノーマライズを適用する。
