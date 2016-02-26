@@ -14,7 +14,8 @@ a:hover {
   color: ;
   text-decoration: none;
 }
-//  静的サイトの場足以下全文消去
+
+// 静的サイトの場足以下全文消去
 @media and (min-width: 768px) {
   body {
     font-size: 14px;
