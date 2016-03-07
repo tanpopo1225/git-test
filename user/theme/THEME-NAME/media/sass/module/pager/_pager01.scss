@@ -7,38 +7,38 @@
   line-height: 28px;
 }
 .pager ul li a {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #333;
-  font-weight: bold;
-  text-decoration: none;
   color: #333;
+  display: inline-block;
+  font-weight: bold;
+  height: 28px;
+  text-decoration: none;
+  width: 28px;
 }
 .pager a:hover {
-  background: #333;
   color: #ffffff;
+  background: #333;
 }
 .pager .current {
-  display: inline-block;
-  width: 28px;
   background: #333;
   border: 1px solid #333;
-  font-weight: bold;
   color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  width: 28px;
 }
 .pager ul li.prev {
   margin: 0 5px 0 0;
 }
 .pager ul li.prev a {
-  width: auto;
   padding: 0 7px;
+  width: auto;
 }
 .pager ul li.next {
   margin: 0 0 0 5px;
 }
 .pager ul li.next a {
-  width: auto;
   padding: 0 7px;
+  width: auto;
 }
