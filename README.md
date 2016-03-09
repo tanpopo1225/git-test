@@ -38,8 +38,11 @@ user/
 |        |   |-- core/
 |        |   |   |-- _settings.scss
 |        |   |   |-- _core.scss
-|        |   |   |-- _grid.scss
 |        |   |   |-- _pc-grid.scss
+|        |   |   |
+|        |   |   |-- grid/
+|        |   |       |--_grid.scss
+|        |   |
 |        |   |
 |        |   |-- layout/
 |        |   |   |-- _cms.scss
