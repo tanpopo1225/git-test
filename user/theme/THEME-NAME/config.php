@@ -1,9 +1,9 @@
 <?php return array(
-	
-	//�e�[�}��
-	'theme_title' => '�Č���',
-	
-	//�e�[�}�̐���
-	'theme_desc' => '�Č����̃e�[�}�ł��B',
-	
+
+  //テーマ名
+  'theme_title' => '案件名',
+
+  //テーマの説明
+  'theme_desc' => '案件名のテーマです。’,
+
 );
