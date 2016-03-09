@@ -3,7 +3,9 @@
 // グリッドシステム
 // --------------------------------------------------
 .container {
-  @media (min-width: $screen-pc) {
-    width: $container-pc;
+  @include container-fixed;
+  width: $container-pc;
+  @media (max-width: $screen-tb) {
+    width: auto;
   }
 }

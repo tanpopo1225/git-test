@@ -3,17 +3,20 @@
 // 変数設定
 // --------------------------------------------------
 
+// LightCms使用時に設定
+$cms-column-width: 690px;
 
 // プレークポイント
-$screen-tb: 480px;
-$screen-pc: 768px;
+$screen-tb: 768px;
+$screen-sp: 480px;
 
-$screen-sp-max: ($screen-tb - 1) !default;
-$screen-tb-max: ($screen-pc - 1) !default;
+$screen-tb-min: ($screen-sp + 1) !default;
 
 // グリッドシステムカラムのそれぞれの間の余白
 $grid-gutter-width: 20px !default;
 
+// コンテナ(.container)サイズ
+$container-pc: (960px + $grid-gutter-width) !default;
 
-// コンテナサイズ
-$container-pc:            (740px + $grid-gutter-width) !default;
+//** Number of columns in the grid.
+$grid-columns: 12 !default;
