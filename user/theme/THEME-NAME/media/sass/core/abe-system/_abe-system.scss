@@ -1,0 +1,18 @@
+
+@media all and (max-width: 768px) {
+.float > .leftBox{float:none!important;width:100% !important;}
+.float > .rightBox{float:none!important;width:100% !important;}
+.float > [class^="mR"],.float > [class*=" mR"]{margin-right:0!important;}
+.float > [class^="mL"],.float > [class*=" mL"]{margin-left:0!important;}
+.float_r > [class^="mB"],.float_r > [class*=" mB"]{margin-bottom:0!important;}
+}
+@media all and (min-width: 769px) {
+.float_r > .leftBox{float:none!important;width:100% !important;}
+.float_r > .rightBox{float:none!important;width:100% !important;}
+.float_r > [class^="mR"],.float_r > [class*=" mR"]{margin-right:0!important;}
+.float_r > [class^="mL"],.float_r > [class*=" mL"]{margin-left:0!important;}
+.float > [class^="mB"],.float > [class*=" mB"]{margin-bottom:0!important;}
+}
+.float {
+  @include clearfix;
+}
