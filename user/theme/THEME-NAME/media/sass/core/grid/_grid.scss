@@ -8,6 +8,7 @@
 .container {
   @include container-fixed;
   width: $container-pc;
+
   @media (max-width: $screen-tb) {
     width: auto;
   }
