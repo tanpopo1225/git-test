@@ -220,5 +220,32 @@ tfoot,
 address {
   margin: 0;
   padding: 0;
+}
+input,
+textarea,
+table,
+thead,
+tbody,
+tfoot,
+address {
   text-align: left;
+}
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+form,
+p {
+  text-align: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
 }
