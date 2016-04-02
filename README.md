@@ -26,7 +26,7 @@ http://developers.linecorp.com/blog/?p=1027
 
 
 ### ファイル構造
-import.cssへ出力（CMS設計上の理由）  
+import.cssへ出力  
 
 ```
 user/
