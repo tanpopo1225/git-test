@@ -1,61 +1,164 @@
 @for $i from 8 through 40 {
   .f#{$i}px {
-    font-size: #{$i}px;
+    font-size: #{$i}px !important;
   }
 }
 
 @for $i from 0 through 20 {
   .mt#{$i} {
-    margin-top: #{$i}px;
+    margin-top: #{$i}px !important;
   }
   .mr#{$i} {
-    margin-right: #{$i}px;
+    margin-right: #{$i}px !important;
   }
   .mb#{$i} {
-    margin-bottom: #{$i}px;
+    margin-bottom: #{$i}px !important;
   }
   .ml#{$i} {
-    margin-left: #{$i}px;
+    margin-left: #{$i}px !important;
   }
   .pt#{$i} {
-    padding-top: #{$i}px;
+    padding-top: #{$i}px !important;
   }
   .pr#{$i} {
-    padding-right: #{$i}px;
+    padding-right: #{$i}px !important;
   }
   .pb#{$i} {
-    padding-bottom: #{$i}px;
+    padding-bottom: #{$i}px !important;
   }
   .pl#{$i} {
-    padding-left: #{$i}px;
+    padding-left: #{$i}px !important;
+  }
+  @media (max-width: $screen-tb) and (min-width: $screen-tb-min) {
+    .tb-mt#{$i} {
+      margin-top: #{$i}px !important;
+    }
+    .tb-mr#{$i} {
+      margin-right: #{$i}px !important;
+    }
+    .tb-mb#{$i} {
+      margin-bottom: #{$i}px !important;
+    }
+    .tb-ml#{$i} {
+      margin-left: #{$i}px !important;
+    }
+    .tb-pt#{$i} {
+      padding-top: #{$i}px !important;
+    }
+    .tb-pr#{$i} {
+      padding-right: #{$i}px !important;
+    }
+    .tb-pb#{$i} {
+      padding-bottom: #{$i}px !important;
+    }
+    .tb-pl#{$i} {
+      padding-left: #{$i}px !important;
+    }
+  }
+  @media (max-width: $screen-sp) {
+    .sp-mt#{$i} {
+      margin-top: #{$i}px !important;
+    }
+    .sp-mr#{$i} {
+      margin-right: #{$i}px !important;
+    }
+    .sp-mb#{$i} {
+      margin-bottom: #{$i}px !important;
+    }
+    .sp-ml#{$i} {
+      margin-left: #{$i}px !important;
+    }
+    .sp-pt#{$i} {
+      padding-top: #{$i}px !important;
+    }
+    .sp-pr#{$i} {
+      padding-right: #{$i}px !important;
+    }
+    .sp-pb#{$i} {
+      padding-bottom: #{$i}px !important;
+    }
+    .sp-pl#{$i} {
+      padding-left: #{$i}px !important;
+    }
   }
 }
 $n: 25px;
 @while $n <= 120 {
   .mt#{$n} {
-    margin-top: #{$n}px;
+    margin-top: #{$n}px !important;
   }
   .mr#{$n} {
-    margin-right: #{$n}px;
+    margin-right: #{$n}px !important;
   }
   .mb#{$n} {
-    margin-bottom: #{$n}px;
+    margin-bottom: #{$n}px !important;
   }
   .ml#{$n} {
-    margin-left: #{$n}px;
+    margin-left: #{$n}px !important;
   }
   .pt#{$n} {
-    padding-top: #{$n}px;
+    padding-top: #{$n}px !important;
   }
   .pr#{$n} {
-    padding-right: #{$n}px;
+    padding-right: #{$n}px !important;
   }
   .pb#{$n} {
-    padding-bottom: #{$n}px;
+    padding-bottom: #{$n}px !important;
   }
   .pl#{$n} {
-    padding-left: #{$n}px;
+    padding-left: #{$n}px !important;
+  }
+  @media (max-width: $screen-tb) and (min-width: $screen-tb-min) {
+    .tb-mt#{$n} {
+      margin-top: #{$n}px !important;
+    }
+    .tb-mr#{$n} {
+      margin-right: #{$n}px !important;
+    }
+    .tb-mb#{$n} {
+      margin-bottom: #{$n}px !important;
+    }
+    .tb-ml#{$n} {
+      margin-left: #{$n}px !important;
+    }
+    .tb-pt#{$n} {
+      padding-top: #{$n}px !important;
+    }
+    .tb-pr#{$n} {
+      padding-right: #{$n}px !important;
+    }
+    .tb-pb#{$n} {
+      padding-bottom: #{$n}px !important;
+    }
+    .tb-pl#{$n} {
+      padding-left: #{$n}px !important;
+    }
+  }
+  @media (max-width: $screen-sp) {
+    .sp-mt#{$n} {
+      margin-top: #{$n}px !important;
+    }
+    .sp-mr#{$n} {
+      margin-right: #{$n}px !important;
+    }
+    .sp-mb#{$n} {
+      margin-bottom: #{$n}px !important;
+    }
+    .sp-ml#{$n} {
+      margin-left: #{$n}px !important;
+    }
+    .sp-pt#{$n} {
+      padding-top: #{$n}px !important;
+    }
+    .sp-pr#{$n} {
+      padding-right: #{$n}px !important;
+    }
+    .sp-pb#{$n} {
+      padding-bottom: #{$n}px !important;
+    }
+    .sp-pl#{$n} {
+      padding-left: #{$n}px !important;
+    }
   }
   $n: $n + 5;
 }
-
