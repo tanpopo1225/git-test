@@ -8,80 +8,54 @@
   .mt#{$i} {
     margin-top: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .mt#{$i * 5} {
-    margin-top: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .mr#{$i} {
     margin-right: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .mr#{$i * 5} {
-    margin-right: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .mb#{$i} {
     margin-bottom: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .mb#{$i * 5} {
-    margin-bottom: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .ml#{$i} {
     margin-left: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .ml#{$i * 5} {
-    margin-left: #{$i * 5}px;
-  }
-}
-
-@for $i from 0 through 20 {
   .pt#{$i} {
     padding-top: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .pt#{$i * 5} {
-    padding-top: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .pr#{$i} {
     padding-right: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .pr#{$i * 5} {
-    padding-right: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .pb#{$i} {
     padding-bottom: #{$i}px;
   }
-}
-@for $i from 25 through 120 {
-  .pb#{$i * 5} {
-    padding-bottom: #{$i * 5}px;
-  }
-}
-@for $i from 0 through 20 {
   .pl#{$i} {
     padding-left: #{$i}px;
   }
 }
-@for $i from 25 through 120 {
-  .pl#{$i * 5} {
-    padding-left: #{$i * 5}px;
+$n: 25px;
+@while $n <= 120 {
+  .mt#{$n} {
+    margin-top: #{$n}px;
   }
+  .mr#{$n} {
+    margin-right: #{$n}px;
+  }
+  .mb#{$n} {
+    margin-bottom: #{$n}px;
+  }
+  .ml#{$n} {
+    margin-left: #{$n}px;
+  }
+  .pt#{$n} {
+    padding-top: #{$n}px;
+  }
+  .pr#{$n} {
+    padding-right: #{$n}px;
+  }
+  .pb#{$n} {
+    padding-bottom: #{$n}px;
+  }
+  .pl#{$n} {
+    padding-left: #{$n}px;
+  }
+  $n: $n + 5;
 }
+
