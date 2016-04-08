@@ -10,8 +10,10 @@ $cms-column-width: 690px;
 $screen-tb: 768px;
 $screen-sp: 480px;
 
+$screen-pc-min: ($screen-tb + 1) !default;
 $screen-tb-min: ($screen-sp + 1) !default;
 
+$container-tb: 980px;
 
 // --------------------------------------------------
 // グリッドシステム設定

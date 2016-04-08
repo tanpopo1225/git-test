@@ -1,0 +1,44 @@
+.pager {
+  font-size: 0;
+  text-align: center; }
+
+.pager li {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 2px; }
+
+.pager li a {
+  color: #CC6686;
+  display: block;
+  text-decoration: none; }
+
+.pager li a:hover {
+  opacity: 0.7; }
+
+.pager li.next {
+  margin-left: 4px; }
+
+.pager li.prev {
+  margin-right: 4px; }
+
+.pager li:not(.prev):not(.next) {
+  background-color: #CC6686;
+  border: 1px solid #CB6686;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  width: 20px; }
+
+.pager li:not(.prev):not(.next) a {
+  background-color: #FFF;
+  color: #CC6686; }
+
+.pager li:not(.prev):not(.next) a:hover {
+  background-color: #CC6686;
+  color: #FFF;
+  opacity: 1; }
+
+/*# sourceMappingURL=pager02.css.map */

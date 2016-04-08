@@ -29,36 +29,47 @@ http://developers.linecorp.com/blog/?p=1027
 import.cssへ出力  
 
 ```
-user/
-|
-| -- theme/THEME-NAME/
-|    |-- media/
-|        |-- sass/
-|        |   |-- import.scss
-|        |   |-- core/
-|        |   |   |-- _settings.scss
-|        |   |   |-- _core.scss
-|        |   |   |-- _pc-grid.scss
-|        |   |   |
-|        |   |   |-- grid/
-|        |   |       |--_grid.scss
-|        |   |
-|        |   |
-|        |   |-- layout/
-|        |   |   |-- _cms.scss
-|        |   |   |-- _base.scss
-|        |   |   |-- _layout.scss
-|        |   |
-|        |   |-- module/
-|        |   |   |-- _module01.scss
-|        |   |   |-- ...
-|        |   |
-|        |   |-- style/
-|        |   |   |-- _style.scss
-|        |
-|        |
-|        |-- css/
-|            |-- import.css
+▾ user/theme/THEME-NAME/
+  ▾ media/
+    ▾ css/
+      ▾ module/
+        ▾ button/
+            button01.css
+            button01.css.map
+        ▾ pager/
+            pager02.css
+            pager02.css.map
+        import.css
+    ▾ js/
+        common.js
+    ▾ sass/
+      ▾ core/
+        ▾ mixins/
+            _clearfix.scss
+            _grid-system.scss
+          _core.scss
+          _grid.scss
+          _nobuyosystem.scss
+      ▾ layout/
+          _base.scss
+          _cms.scss
+      ▾ module/
+        ▾ button/
+            button01.scss
+            button02.css
+        ▾ pager/
+            _pager01.scss
+            pager02.scss
+          _img-cover.scss
+        _settings.scss
+        import.scss
+    config.php
+    preview.png
+  Gemfile
+  Gemfile.lock
+  index.html
+  README.md
+  todo.md
 ```
 
 
