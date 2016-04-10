@@ -11,7 +11,7 @@
 
 .container {
   @include container-fixed;
-  $container-pc: (960px + $grid-gutter-width) !default;
+  width: $container-pc;
 
   @media (max-width: $screen-tb) {
     width: $container-tb;
