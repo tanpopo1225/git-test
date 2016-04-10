@@ -11,12 +11,13 @@
 
 .container {
   @include container-fixed;
+  $container-pc: (960px + $grid-gutter-width) !default;
 
   @media (max-width: $screen-tb) {
     width: $container-tb;
   }
   @media (max-width: $screen-sp) {
-    width: auto;
+    width: $container-sp;
   }
 }
 
