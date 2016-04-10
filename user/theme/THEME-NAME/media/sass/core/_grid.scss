@@ -55,20 +55,15 @@
 @include make-grid(pc);
 
 
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-
-@media (max-width: $screen-tb) {
-  @include make-grid(tb);
-}
+@if $responsive {
+  // Tablet grid
+  @media (max-width: $screen-tb) {
+    @include make-grid(tb);
+  }
 
 
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-
-@media (max-width: $screen-sp) {
-  @include make-grid(sp);
+  // Smartphone grid
+  @media (max-width: $screen-sp) {
+    @include make-grid(sp);
+  }
 }
