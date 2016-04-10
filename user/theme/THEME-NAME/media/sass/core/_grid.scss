@@ -13,11 +13,13 @@
   @include container-fixed;
   width: $container-pc;
 
-  @media (max-width: $screen-tb) {
-    width: $container-tb;
-  }
-  @media (max-width: $screen-sp) {
-    width: $container-sp;
+  @if $responsive {
+    @media (max-width: $screen-tb) {
+      width: $container-tb;
+    }
+    @media (max-width: $screen-sp) {
+      width: $container-sp;
+    }
   }
 }
 
