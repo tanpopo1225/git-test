@@ -4,9 +4,9 @@
 // any value of `$grid-columns`.
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin make-grid-columns($i: 1, $list: ".col-sp-#{$i}, .col-tb-#{$i}") {
+@mixin make-grid-columns($i: 1, $list: ".col#{$i}, .col#{$i}-tb, .col#{$i}-sp") {
   @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-sp-#{$i}, .col-tb-#{$i}";
+    $list: "#{$list}, .col#{$i}, .col#{$i}-tb, .col#{$i}-sp";
   }
   #{$list} {
     position: relative;
@@ -20,9 +20,9 @@
 
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+@mixin float-grid-columns($class, $i: 1, $list: ".col#{$i}#{$class}") {
   @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-#{$class}-#{$i}";
+    $list: "#{$list}, .col#{$i}#{$class}";
   }
   #{$list} {
     float: left;
@@ -32,32 +32,32 @@
 
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index > 0) {
-    .col-#{$class}-#{$index} {
+    .col#{$index}#{$class} {
       width: percentage(($index / $grid-columns));
     }
   }
   @if ($type == push) and ($index > 0) {
-    .col-#{$class}-push-#{$index} {
+    .col#{$index}-push#{$class} {
       left: percentage(($index / $grid-columns));
     }
   }
   @if ($type == push) and ($index == 0) {
-    .col-#{$class}-push-0 {
+    .col0-push#{$class} {
       left: auto;
     }
   }
   @if ($type == pull) and ($index > 0) {
-    .col-#{$class}-pull-#{$index} {
+    .col#{$index}-pull#{$class} {
       right: percentage(($index / $grid-columns));
     }
   }
   @if ($type == pull) and ($index == 0) {
-    .col-#{$class}-pull-0 {
+    .col0-pull#{$class} {
       right: auto;
     }
   }
   @if ($type == offset) {
-    .col-#{$class}-offset-#{$index} {
+    .col#{$index}-offset#{$class} {
       margin-left: percentage(($index / $grid-columns));
     }
   }

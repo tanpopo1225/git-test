@@ -52,18 +52,18 @@
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-@include make-grid(pc);
+@include make-grid(null);
 
 
 @if $responsive {
   // Tablet grid
   @media (max-width: $screen-tb) {
-    @include make-grid(tb);
+    @include make-grid(-tb);
   }
 
 
   // Smartphone grid
   @media (max-width: $screen-sp) {
-    @include make-grid(sp);
+    @include make-grid(-sp);
   }
 }
