@@ -35,7 +35,7 @@
   .pl#{$i} {
     padding-left: #{$i}px !important;
   }
-  @media (max-width: $screen-tb) and (min-width: $screen-tb-min) {
+  @media (max-width: $screen-tb) {
     .tb-mt#{$i} {
       margin-top: #{$i}px !important;
     }
@@ -114,7 +114,7 @@ $n: 25px;
   .pl#{$n} {
     padding-left: #{$n}px !important;
   }
-  @media (max-width: $screen-tb) and (min-width: $screen-tb-min) {
+  @media (max-width: $screen-tb) {
     .tb-mt#{$n} {
       margin-top: #{$n}px !important;
     }
