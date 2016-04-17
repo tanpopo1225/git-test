@@ -16,7 +16,7 @@ $(function() {
 
 
 // fade（マウスオーバー時にフェードしながら半透明化）
-$(document).ready(function() {
+$(function() {
     $(".fade").fadeTo(0, 1.0);
     $(".fade").hover(function() {
         $(this).fadeTo(300, 0.7);
