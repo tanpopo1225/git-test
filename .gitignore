@@ -46,6 +46,6 @@ vendor/bundle
 
 # Generated CSS #
 #################
-css/
+user/media/theme/*/media/css
 *.css
 *.map
