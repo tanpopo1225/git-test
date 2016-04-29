@@ -11,19 +11,21 @@
   margin-bottom: 1em;
 }
 
-@media (max-width: $screen-tb) {
-  .pc {
-    display: none;
+@if $responsive {
+  @media (max-width: $screen-tb) {
+    .pc {
+      display: none;
+    }
   }
-}
-@media (min-width: $screen-pc-min) {
-  .tb {
-    display: none;
+  @media (min-width: $screen-pc-min) {
+    .tb {
+      display: none;
+    }
   }
-}
-@media (min-width: $screen-tb-min) {
-  .sp {
-    display: none;
+  @media (min-width: $screen-tb-min) {
+    .sp {
+      display: none;
+    }
   }
 }
 

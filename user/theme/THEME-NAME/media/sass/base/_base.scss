@@ -17,8 +17,10 @@ a:hover {
   text-decoration: none;
 }
 
-@media (max-width: $screen-tb) {
-  body {
-    font-size: 12px;
+@if $responsive {
+  @media (max-width: $screen-tb) {
+    body {
+      font-size: 12px;
+    }
   }
 }
