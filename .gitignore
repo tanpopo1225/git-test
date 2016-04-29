@@ -46,4 +46,6 @@ vendor/bundle
 
 # Generated CSS #
 #################
-.css
+css/
+*.css
+*.map
