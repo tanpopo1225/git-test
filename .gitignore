@@ -43,3 +43,7 @@ vendor/bundle
 # Cache #
 #########
 .sass-cache
+
+# Generated CSS #
+#################
+.css

@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem "compass"
+gem "listen"
+gem "sass"
