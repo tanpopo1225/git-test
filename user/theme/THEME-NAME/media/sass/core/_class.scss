@@ -2,6 +2,16 @@
   .f#{$i}px {
     font-size: #{$i}px !important;
   }
+  @media (max-width: $screen-tb) {
+    .tb-f#{$i}px {
+      font-size: #{$i}px !important;
+    }
+  }
+  @media (max-width: $screen-sp) {
+    .sp-f#{$i}px {
+      font-size: #{$i}px !important;
+    }
+  }
 }
 
 .mt1em {
