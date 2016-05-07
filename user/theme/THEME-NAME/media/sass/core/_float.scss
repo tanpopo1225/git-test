@@ -1,15 +1,15 @@
 @import 'mixins/clearfix';
 
 @media (max-width: $screen-tb) {
-.float > .leftBox{float:none!important;width:100% !important;}
-.float > .rightBox{float:none!important;width:100% !important;}
+.float > .leftbox{float:none!important;width:100% !important;}
+.float > .rightbox{float:none!important;width:100% !important;}
 .float > [class^="mr"],.float > [class*=" mr"]{margin-right:0!important;}
 .float > [class^="ml"],.float > [class*=" ml"]{margin-left:0!important;}
 .float_r > [class^="mb"],.float_r > [class*=" mb"]{margin-bottom:0!important;}
 }
 @media (min-width: $screen-pc-min) {
-.float_r > .leftBox{float:none!important;width:100% !important;}
-.float_r > .rightBox{float:none!important;width:100% !important;}
+.float_r > .leftbox{float:none!important;width:100% !important;}
+.float_r > .rightbox{float:none!important;width:100% !important;}
 .float_r > [class^="mr"],.float_r > [class*=" mr"]{margin-right:0!important;}
 .float_r > [class^="ml"],.float_r > [class*=" ml"]{margin-left:0!important;}
 .float > [class^="mb"],.float > [class*=" mb"]{margin-bottom:0!important;}

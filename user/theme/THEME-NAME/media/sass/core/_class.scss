@@ -15,7 +15,25 @@
   height: auto;
 }
 .w100 {
-  width: 100%;
+  width: 100% !important;
+}
+.leftBox{
+  float:left!important;
+}
+.rightBox{
+  float:right!important;
+}
+.centerBox{
+  margin-left:auto!important;margin-right:auto!important;
+}
+.leftText{
+  text-align:left!important;
+}
+.centerText{
+  text-align:center!important;
+}
+.rightText{
+  text-align:right!important;
 }
 
 @if $responsive {
@@ -114,7 +132,7 @@
     }
   }
 }
-$n: 25px;
+$n: 25;
 @while $n <= 120 {
   .mt#{$n} {
     margin-top: #{$n}px !important;
