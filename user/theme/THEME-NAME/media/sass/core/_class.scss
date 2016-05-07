@@ -10,6 +10,13 @@
 .mb1em {
   margin-bottom: 1em;
 }
+.mw100 {
+  max-width: 100%;
+  height: auto;
+}
+.w100 {
+  width: 100%;
+}
 
 @if $responsive {
   @media (max-width: $screen-tb) {
