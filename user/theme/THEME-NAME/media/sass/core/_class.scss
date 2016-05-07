@@ -2,12 +2,16 @@
   .f#{$i}px {
     font-size: #{$i}px !important;
   }
-  @media (max-width: $screen-tb) {
+}
+@media (max-width: $screen-tb) {
+  @for $i from 8 through 40 {
     .tb-f#{$i}px {
       font-size: #{$i}px !important;
     }
   }
-  @media (max-width: $screen-sp) {
+}
+@media (max-width: $screen-sp) {
+  @for $i from 8 through 40 {
     .sp-f#{$i}px {
       font-size: #{$i}px !important;
     }
@@ -89,7 +93,10 @@
   .pl#{$i} {
     padding-left: #{$i}px !important;
   }
-  @media (max-width: $screen-tb) {
+}
+
+@media (max-width: $screen-tb) {
+  @for $i from 0 through 20 {
     .tb-mt#{$i} {
       margin-top: #{$i}px !important;
     }
@@ -115,7 +122,10 @@
       padding-left: #{$i}px !important;
     }
   }
-  @media (max-width: $screen-sp) {
+}
+
+@media (max-width: $screen-sp) {
+  @for $i from 0 through 20 {
     .sp-mt#{$i} {
       margin-top: #{$i}px !important;
     }
@@ -168,7 +178,11 @@ $n: 25;
   .pl#{$n} {
     padding-left: #{$n}px !important;
   }
-  @media (max-width: $screen-tb) {
+  $n: $n + 5;
+}
+
+@media (max-width: $screen-tb) {
+  @while $n <= 120 {
     .tb-mt#{$n} {
       margin-top: #{$n}px !important;
     }
@@ -194,7 +208,9 @@ $n: 25;
       padding-left: #{$n}px !important;
     }
   }
-  @media (max-width: $screen-sp) {
+}
+@media (max-width: $screen-sp) {
+  @while $n <= 120 {
     .sp-mt#{$n} {
       margin-top: #{$n}px !important;
     }
@@ -220,5 +236,4 @@ $n: 25;
       padding-left: #{$n}px !important;
     }
   }
-  $n: $n + 5;
 }
