@@ -1,3 +1,4 @@
+
 @for $i from 8 through 40 {
   .f#{$i}px {
     font-size: #{$i}px !important;
@@ -5,14 +6,14 @@
 }
 @media (max-width: $screen-tb) {
   @for $i from 8 through 40 {
-    .tb-f#{$i}px {
+    .f#{$i}px-tb {
       font-size: #{$i}px !important;
     }
   }
 }
 @media (max-width: $screen-sp) {
   @for $i from 8 through 40 {
-    .sp-f#{$i}px {
+    .f#{$i}px-sp {
       font-size: #{$i}px !important;
     }
   }
@@ -51,18 +52,18 @@
 }
 
 @if $responsive {
-  @media (max-width: $screen-tb) {
-    .pc {
+  .pc {
+    @media (max-width: $screen-tb) {
+        display: none;
+    }
+  }
+  .tb {
+    @media (min-width: $screen-pc-min) {
       display: none;
     }
   }
-  @media (min-width: $screen-pc-min) {
-    .tb {
-      display: none;
-    }
-  }
-  @media (min-width: $screen-tb-min) {
-    .sp {
+  .sp {
+    @media (min-width: $screen-tb-min) {
       display: none;
     }
   }
@@ -97,28 +98,28 @@
 
 @media (max-width: $screen-tb) {
   @for $i from 0 through 20 {
-    .tb-mt#{$i} {
+    .mt#{$i}-tb {
       margin-top: #{$i}px !important;
     }
-    .tb-mr#{$i} {
+    .mr#{$i}-tb {
       margin-right: #{$i}px !important;
     }
-    .tb-mb#{$i} {
+    .mb#{$i}-tb {
       margin-bottom: #{$i}px !important;
     }
-    .tb-ml#{$i} {
+    .ml#{$i}-tb {
       margin-left: #{$i}px !important;
     }
-    .tb-pt#{$i} {
+    .pt#{$i}-tb {
       padding-top: #{$i}px !important;
     }
-    .tb-pr#{$i} {
+    .pr#{$i}-tb {
       padding-right: #{$i}px !important;
     }
-    .tb-pb#{$i} {
+    .pb#{$i}-tb {
       padding-bottom: #{$i}px !important;
     }
-    .tb-pl#{$i} {
+    .pl#{$i}-tb {
       padding-left: #{$i}px !important;
     }
   }
@@ -126,28 +127,28 @@
 
 @media (max-width: $screen-sp) {
   @for $i from 0 through 20 {
-    .sp-mt#{$i} {
+    .mt#{$i}-sp {
       margin-top: #{$i}px !important;
     }
-    .sp-mr#{$i} {
+    .mr#{$i}-sp {
       margin-right: #{$i}px !important;
     }
-    .sp-mb#{$i} {
+    .mb#{$i}-sp {
       margin-bottom: #{$i}px !important;
     }
-    .sp-ml#{$i} {
+    .ml#{$i}-sp {
       margin-left: #{$i}px !important;
     }
-    .sp-pt#{$i} {
+    .pt#{$i}-sp {
       padding-top: #{$i}px !important;
     }
-    .sp-pr#{$i} {
+    .pr#{$i}-sp {
       padding-right: #{$i}px !important;
     }
-    .sp-pb#{$i} {
+    .pb#{$i}-sp {
       padding-bottom: #{$i}px !important;
     }
-    .sp-pl#{$i} {
+    .pl#{$i}-sp {
       padding-left: #{$i}px !important;
     }
   }
@@ -186,53 +187,53 @@ $n: 25;
     .tb-mt#{$n} {
       margin-top: #{$n}px !important;
     }
-    .tb-mr#{$n} {
+    .mr#{$n}-tb {
       margin-right: #{$n}px !important;
     }
-    .tb-mb#{$n} {
+    .mb#{$n}-tb {
       margin-bottom: #{$n}px !important;
     }
-    .tb-ml#{$n} {
+    .ml#{$n}-tb {
       margin-left: #{$n}px !important;
     }
-    .tb-pt#{$n} {
+    .pt#{$n}-tb {
       padding-top: #{$n}px !important;
     }
-    .tb-pr#{$n} {
+    .pr#{$n}-tb {
       padding-right: #{$n}px !important;
     }
-    .tb-pb#{$n} {
+    .pb#{$n}-tb {
       padding-bottom: #{$n}px !important;
     }
-    .tb-pl#{$n} {
+    .pl#{$n}-tb {
       padding-left: #{$n}px !important;
     }
   }
 }
 @media (max-width: $screen-sp) {
   @while $n <= 120 {
-    .sp-mt#{$n} {
+    .mt#{$n}-sp {
       margin-top: #{$n}px !important;
     }
-    .sp-mr#{$n} {
+    .mr#{$n}-sp {
       margin-right: #{$n}px !important;
     }
-    .sp-mb#{$n} {
+    .mb#{$n}-sp {
       margin-bottom: #{$n}px !important;
     }
-    .sp-ml#{$n} {
+    .ml#{$n}-sp {
       margin-left: #{$n}px !important;
     }
-    .sp-pt#{$n} {
+    .pt#{$n}-sp {
       padding-top: #{$n}px !important;
     }
-    .sp-pr#{$n} {
+    .pr#{$n}-sp {
       padding-right: #{$n}px !important;
     }
-    .sp-pb#{$n} {
+    .pb#{$n}-sp {
       padding-bottom: #{$n}px !important;
     }
-    .sp-pl#{$n} {
+    .pl#{$n}-sp {
       padding-left: #{$n}px !important;
     }
   }
