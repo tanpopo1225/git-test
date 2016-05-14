@@ -20,7 +20,7 @@ a:hover {
 @if $responsive {
   @media (max-width: $screen-tb) {
     body {
-      font-size: $base-font-size-sp;
+      font-size: $base-font-size-tb;
     }
   }
 }
