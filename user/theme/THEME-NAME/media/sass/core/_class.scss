@@ -95,6 +95,7 @@ $n: 25;
     }
   }
 
+  $n: 25;
   @while $n <= 120 {
     .tb-mt#{$n} {
       margin-top: #{$n}px !important;
@@ -120,6 +121,7 @@ $n: 25;
     .pl#{$n}-tb {
       padding-left: #{$n}px !important;
     }
+    $n: $n + 5;
   }
 }
 
@@ -157,6 +159,7 @@ $n: 25;
     }
   }
 
+  $n: 25;
   @while $n <= 120 {
     .mt#{$n}-sp {
       margin-top: #{$n}px !important;
@@ -182,6 +185,7 @@ $n: 25;
     .pl#{$n}-sp {
       padding-left: #{$n}px !important;
     }
+    $n: $n + 5;
   }
 }
 
