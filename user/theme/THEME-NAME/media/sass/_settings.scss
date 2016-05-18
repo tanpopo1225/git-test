@@ -6,8 +6,11 @@
 // レスポンシブサイトかどうかの設定 - true/false
 $responsive: true;
 
-// LightCms使用時に設定
-$cms-column-width: 690px;
+// LightCMS導入サイトかどうかの設定 - true/false
+$light-cms: true;
+
+// LightCMS使用時に設定
+$light-cms-column-width: 690px;
 
 // プレークポイント
 $screen-tb: 768px;
