@@ -1,13 +1,16 @@
+@charset "UTF-8";
+
 @import 'mixins/clearfix';
 @import 'mixins/grid-system';
+
 //
-// Grid system
+// グリッドシステム
 // --------------------------------------------------
 
 
-// Container widths
+// コンテナ幅
 //
-// Set the container width, and override it for fixed navbars in media queries.
+// 設定された幅のコンテナを生成
 
 .container {
   @include container-fixed;
@@ -24,50 +27,39 @@
 }
 
 
-// Fluid container
+// フルイドコンテナ
 //
-// Utilizes the mixin meant for fixed width containers, but without any defined
-// width for fluid, full width layouts.
+// 横幅100%のコンテナを生成
 
 .container-fluid {
   @include container-fixed;
 }
 
 
-// Row
+// Rowクラス
 //
-// Rows contain and clear the floats of your columns.
+// グリッドカラム用のラッパークラスを生成
 
 .row {
   @include make-row;
 }
 
 
-// Columns
+// カラム
 //
-// Common styles for small and large grid columns
+// カラムクラス生成
 @include make-grid-columns;
-@if $responsive {
-  @include make-responsive-grid-columns;
-}
-
-
-// Extra small grid
-//
-// Columns, offsets, pushes, and pulls for extra small devices like
-// smartphones.
-
 @include make-grid(null);
 
-
 @if $responsive {
-  // Tablet grid
+  @include make-responsive-grid-columns;
+
+  // タブレット用グリッド
   @media (max-width: $screen-tb) {
     @include make-grid(-tb);
   }
 
-
-  // Smartphone grid
+  // スマホ用グリッド
   @media (max-width: $screen-sp) {
     @include make-grid(-sp);
   }

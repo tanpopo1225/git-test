@@ -1,9 +1,12 @@
+@charset "UTF-8";
+// フォントサイズクラスの生成
 @for $i from 8 through 40 {
   .f#{$i}px {
     font-size: #{$i}px !important;
   }
 }
 
+// 余白クラスの生成
 @for $i from 0 through 20 {
   .mt#{$i} {
     margin-top: #{$i}px !important;
@@ -30,8 +33,6 @@
     padding-left: #{$i}px !important;
   }
 }
-
-
 $n: 25;
 @while $n <= 120 {
   .mt#{$n} {
@@ -63,12 +64,14 @@ $n: 25;
 
 @if $responsive {
   @media (max-width: $screen-tb) {
+// タブレット用フォントサイズクラスの生成
     @for $i from 8 through 40 {
       .f#{$i}px-tb {
         font-size: #{$i}px !important;
       }
     }
 
+// タブレット用余白クラスの生成
     @for $i from 0 through 20 {
       .mt#{$i}-tb {
         margin-top: #{$i}px !important;
@@ -95,7 +98,6 @@ $n: 25;
         padding-left: #{$i}px !important;
       }
     }
-
     $n: 25;
     @while $n <= 120 {
       .tb-mt#{$n} {
@@ -127,12 +129,14 @@ $n: 25;
   }
 
   @media (max-width: $screen-sp) {
+// スマホ用フォントサイズクラスの生成
     @for $i from 8 through 40 {
       .f#{$i}px-sp {
         font-size: #{$i}px !important;
       }
     }
 
+// スマホ用余白クラスの生成
     @for $i from 0 through 20 {
       .mt#{$i}-sp {
         margin-top: #{$i}px !important;
@@ -159,7 +163,6 @@ $n: 25;
         padding-left: #{$i}px !important;
       }
     }
-
     $n: 25;
     @while $n <= 120 {
       .mt#{$n}-sp {
