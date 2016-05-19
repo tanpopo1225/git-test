@@ -17,9 +17,9 @@
 
 
 ### CSS設計
-SMACSSを参考  
-http://03log.me/blog/2014-09-30-smacss.html  
-http://chroma.hatenablog.com/entry/2013/07/22/120818  
+RSCSSを参考  
+http://rscss.io/  
+https://github.com/rstacruz/rscss
 
 Sass導入を念頭に置いた構成  
 http://developers.linecorp.com/blog/?p=1027  
@@ -29,60 +29,62 @@ http://developers.linecorp.com/blog/?p=1027
 import.cssへ出力  
 
 ```
-▾ user/theme/THEME-NAME/
-  ▾ media/
-    ▾ css/
-      ▾ module/
-        ▾ button/
-            button01.css
-            button01.css.map
-        ▾ pager/
-            pager02.css
-            pager02.css.map
-        import.css
-    ▾ js/
-        common.js
-    ▾ sass/
-      ▾ core/
-        ▾ mixins/
-            _clearfix.scss
-            _grid-system.scss
-          _core.scss
-          _grid.scss
-          _nobuyosystem.scss
-      ▾ layout/
-          _base.scss
-          _cms.scss
-      ▾ module/
-        ▾ button/
-            button01.scss
-            button02.css
-        ▾ pager/
-            _pager01.scss
-            pager02.scss
-          _img-cover.scss
-        _settings.scss
-        import.scss
-    config.php
-    preview.png
+▾ user/
+  ▾ media/THEME-NAME/
+    ▾ common/
+    ▾ layout/
+      ▾ footer/
+      ▾ header/
+      ▾ side/
+    ▾ page/
+  ▾ theme/THEME-NAME/
+    ▾ media/
+      ▾ css/
+          import.scss
+      ▾ js/
+          common.js
+      ▾ sass/
+        ▾ base/
+            _base.scss
+            _cms.scss
+        ▾ core/
+          ▾ mixins/
+              _clearfix.scss
+              _grid-system.scss
+            _class.scss
+            _core.scss
+            _float.scss
+            _grid.scss
+        ▾ module/
+          ▾ button/
+              _button01.scss
+              _button02.scss
+          ▾ pager/
+              _pager01.scss
+              _pager02.scss
+            _img-cover.scss
+        ▾ style/
+            _common.scss
+            _editor.scss
+            _style.scss
+            _variable.scss
+          _settings.scss
+          import.scss
+      config.php
+      preview.png
   Gemfile
   Gemfile.lock
   index.html
   README.md
-  todo.md
 ```
 
 
 ### ディレクトリ説明
 ###### core
-グリッドシステムのブレークポイント設定やそれぞれの余白等の設定ファイルは個々に設置。  
-上記設定ファイルが影響を与えるグリッドシステムのファイルの等編集してはいけないファイルは基本ここに配置。
+編集してはいけないファイルは基本ここに配置。
+リセットCSS等の記述もここ。
 
-###### layout  
-headerの高さや幅、サイドカラムの幅やfloat等のレイアウトに関するもののみ記述。  
-backgroundやborder等の装飾的なものは一切書かない。
-
-###### module  
+###### module
 今までは10回中10回使うものしかテンプレートには含んでいませんでした。  
 なので、再利用出来るコード等も、それを以前書いたサイトに飛んでコピー・ペーストするというような形を取られていたと思います。  
 Sassでは、cssとして吐き出す記述やファイルを選択できるので後々省くコードも問題なくテンプレートに置いておく事が可能です。  
@@ -90,37 +92,50 @@ Sassでは、cssとして吐き出す記述やファイルを選択できるの�
 ボタンやページャーのような10回中10回使うわけではないけれども、10回中3回ぐらい使う物をここに追加していくようにしたいと思っています。  
 なおmoduleの役割上、個々のファイルのみで自己完結出来るよう他の要素（core.scssのリセットを除く）に影響されない書き方にするのを必須とします。
 
+###### style
+基本的に編集するのはこのディレクトリ。
+
 ### ファイル説明
 *[no-edit] = 原則編集禁止*
 *_ファイル名.scss = パーシャルファイル（CSSとしては吐き出されない、SCSSのimportで読み込むファイル。）*
 
-###### _settings.scss
-グリッド幅や変数の設定
+###### import.scss [no-edit]
+読み込むファイルを定義する。
+CSSに変換されるのはこのファイルのみ。
 
-###### core.css [no-edit]  
+###### core.scss [no-edit]
 リセットやノーマライズを適用する。
 
-###### grid.css [no-edit]  
-###### pc-grid.css [no-edit]  
+###### grid.scss [no-edit]
 グリッドシステムの記述。  
-pcのプレフィックス付きは非レスポンシブのもの。  
 
-###### base.css  
-以下デフォルト値の設定  
+###### base.scss [no-edit]
+以下デフォルト値の記述  
 フォント、フォントサイズ  
-リンク色、スタイル
+リンク色、スタイル  
+設定の変更はsettings.scssから
 
-###### cms.css  
-LightCMS（のみ）に必須の設定
+###### cms.scss [no-edit]
+LightCMS（のみ）に必須の記述
+設定の変更はsettings.scssから
 
-###### style.css  
-その他のスタイル
-
-###### \_settings.scss
+###### settings.scss
 sassの変数に対する設定を記述する
 
-## 参考資料
-####CSS [core.css]
+###### style.scss  
+基本的に書き込むのはこのファイル
+
+###### common.scss  
+見出しや色々な箇所で使い回すクラスはここに記載
+
+###### variable.scss
+style.scssやcommon.scssで使う変数は基本的にここに記載
+
+###### editor.scss
+CMS内のエディタで上の方に表示させるクラス（テーブル、ボタン等）はここに記載
+
+### 参考資料
+#### CSS [core.css]
 https://necolas.github.io/normalize.css/3.0.3/normalize.css  
 https://github.com/murtaugh/HTML5-Reset/blob/master/assets/css/reset.css  
 https://github.com/jonathantneal/sanitize.css/blob/master/sanitize.css  
