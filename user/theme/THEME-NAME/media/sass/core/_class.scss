@@ -1,4 +1,45 @@
 @charset "UTF-8";
+
+// pタグ同士の間の余白用クラス
+.mt1em {
+  margin-top: 1em;
+}
+.mb1em {
+  margin-bottom: 1em;
+}
+
+// 画像用幅設定クラス
+.mw100 {
+  max-width: 100%;
+  height: auto;
+}
+.w100 {
+  width: 100% !important;
+}
+
+// フロートクラス
+.left-box{
+  float: left !important;
+}
+.right-box{
+  float: right !important;
+}
+.center-box{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// 行揃え指定クラス
+.left-text{
+  text-align: left !important;
+}
+.right-text{
+  text-align: right !important;
+}
+.center-text{
+  text-align: center !important;
+}
+
 // フォントサイズクラスの生成
 @for $i from 8 through 40 {
   .f#{$i}px {
@@ -64,14 +105,25 @@ $n: 25;
 
 @if $responsive {
   @media (max-width: $screen-tb) {
-// タブレット用フォントサイズクラスの生成
+    // 行揃え指定クラス
+    .left-text-tb {
+      text-align: left !important;
+    }
+    .right-text-tb {
+      text-align: right !important;
+    }
+    .center-text-tb {
+      text-align: center !important;
+    }
+
+    // タブレット用フォントサイズクラスの生成
     @for $i from 8 through 40 {
       .f#{$i}px-tb {
         font-size: #{$i}px !important;
       }
     }
 
-// タブレット用余白クラスの生成
+    // タブレット用余白クラスの生成
     @for $i from 0 through 20 {
       .mt#{$i}-tb {
         margin-top: #{$i}px !important;
@@ -129,14 +181,25 @@ $n: 25;
   }
 
   @media (max-width: $screen-sp) {
-// スマホ用フォントサイズクラスの生成
+    // 行揃え指定クラス
+    .left-text-sp {
+      text-align: left !important;
+    }
+    .right-text-sp {
+      text-align: right !important;
+    }
+    .center-text-sp {
+      text-align: center !important;
+    }
+
+    // スマホ用フォントサイズクラスの生成
     @for $i from 8 through 40 {
       .f#{$i}px-sp {
         font-size: #{$i}px !important;
       }
     }
 
-// スマホ用余白クラスの生成
+    // スマホ用余白クラスの生成
     @for $i from 0 through 20 {
       .mt#{$i}-sp {
         margin-top: #{$i}px !important;
@@ -192,41 +255,8 @@ $n: 25;
       $n: $n + 5;
     }
   }
-}
 
-.mt1em {
-  margin-top: 1em;
-}
-.mb1em {
-  margin-bottom: 1em;
-}
-.mw100 {
-  max-width: 100%;
-  height: auto;
-}
-.w100 {
-  width: 100% !important;
-}
-.left-box{
-  float:left!important;
-}
-.right-box{
-  float:right!important;
-}
-.center-box{
-  margin-left:auto!important;margin-right:auto!important;
-}
-.left-text{
-  text-align:left!important;
-}
-.center-text{
-  text-align:center!important;
-}
-.right-text{
-  text-align:right!important;
-}
-
-@if $responsive {
+  // デバイスごとのディスプレイ指定クラス
   .pc {
     @media (max-width: $screen-tb) {
         display: none;
