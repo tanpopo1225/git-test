@@ -10,6 +10,7 @@ echo
 
 find $BASEDIR -name '*.php' -type f -exec sed -i "" "s/案件名/$name/g" {} \;
 find $BASEDIR \( -name "*.html" -or -name "*.css" -or -name "*.scss" \) -exec sed -i "" "s/THEME-NAME/$theme/g" {} \;
+mv $BASEDIR/user/media/* "$BASEDIR/user/media/$theme/"
 mv $BASEDIR/user/theme/* "$BASEDIR/user/theme/$theme/"
 
 read -p "完了しました。スクリプトを終了するには[RETURN]キーを押して下さい。"
