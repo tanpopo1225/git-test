@@ -1,18 +1,17 @@
-// Framework grid generation -----start
-//
-// Used only by Bootstrap to generate the correct number of grid classes given
-// any value of `$grid-columns`.
+@charset "UTF-8";
 
-// [converter] This is defined recursively in LESS, but Sass supports real loops
+// グリッドフレームワーク
+//
+// "grid-columns"で指定された数だけカラムクラスを生成する
+
 @mixin make-grid-columns($i: 1, $list: ".col#{$i}") {
   @for $i from (1 + 1) through $grid-columns {
     $list: "#{$list}, .col#{$i}";
   }
   #{$list} {
     position: relative;
-    // Prevent columns from collapsing when empty
+    // 空div時に崩れるのを防ぐ為
     min-height: 1px;
-    // Inner gutter via padding
     padding-left:  ceil(($grid-gutter-width / 2));
     padding-right: floor(($grid-gutter-width / 2));
   }
@@ -23,16 +22,14 @@
   }
   #{$list} {
     position: relative;
-    // Prevent columns from collapsing when empty
+    // 空div時に崩れるのを防ぐ為
     min-height: 1px;
-    // Inner gutter via padding
     padding-left:  ceil(($grid-gutter-width / 2));
     padding-right: floor(($grid-gutter-width / 2));
   }
 }
 
 
-// [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin float-grid-columns($class, $i: 1, $list: ".col#{$i}#{$class}") {
   @for $i from (1 + 1) through $grid-columns {
     $list: "#{$list}, .col#{$i}#{$class}";
@@ -76,7 +73,6 @@
   }
 }
 
-// [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin loop-grid-columns($columns, $class, $type) {
   @for $i from 0 through $columns {
     @include calc-grid-column($i, $class, $type);
@@ -84,7 +80,7 @@
 }
 
 
-// Create grid for specific class
+// 特定のクラス用をカラムクラスに変化させるmixin
 @mixin make-grid($class) {
   @include float-grid-columns($class);
   @include loop-grid-columns($grid-columns, $class, width);
@@ -92,13 +88,12 @@
   @include loop-grid-columns($grid-columns, $class, push);
   @include loop-grid-columns($grid-columns, $class, offset);
 }
-// Framework grid generation -----end
 
-// Grid system -----start
+// グリッドシステム
 //
-// Generate semantic grid columns with these mixins.
+// グリッドを生成用mixin
 
-// Centered container element
+// 中央揃えのコンテナを生成
 @mixin container-fixed($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
@@ -107,14 +102,14 @@
   @include clearfix;
 }
 
-// Creates a wrapper for a series of columns
+// カラムのラッパーを生成
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ceil(($gutter / -2));
   margin-right: floor(($gutter / -2));
   @include clearfix;
 }
 
-// Generate the extra small columns
+// PC用カラムの生成
 @mixin make-pc-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   float: left;
@@ -133,7 +128,7 @@
   right: percentage(($columns / $grid-columns));
 }
 
-// Generate the small columns
+// タブレット用カラムの生成
 @mixin make-tb-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -161,7 +156,7 @@
   }
 }
 
-// Generate the medium columns
+// スマートフォン用カラムの生成
 @mixin make-sp-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
   min-height: 1px;
