@@ -12,8 +12,16 @@
     position: relative;
     // 空div時に崩れるのを防ぐ為
     min-height: 1px;
-    padding-left:  ceil(($grid-gutter-width / 2));
-    padding-right: floor(($grid-gutter-width / 2));
+    padding-left:  ceil(($grid-gutter-width-pc / 2));
+    padding-right: floor(($grid-gutter-width-pc / 2));
+    @media (max-width: $screen-tb) {
+      padding-left:  ceil(($grid-gutter-width-tb / 2));
+      padding-right: floor(($grid-gutter-width-tb / 2));
+    }
+    @media (max-width: $screen-sp) {
+      padding-left:  ceil(($grid-gutter-width-sp / 2));
+      padding-right: floor(($grid-gutter-width-sp / 2));
+    }
   }
 }
 @mixin make-responsive-grid-columns($i: 1, $list: ".col#{$i}-tb, .col#{$i}-sp") {
@@ -24,8 +32,16 @@
     position: relative;
     // 空div時に崩れるのを防ぐ為
     min-height: 1px;
-    padding-left:  ceil(($grid-gutter-width / 2));
-    padding-right: floor(($grid-gutter-width / 2));
+    padding-left:  ceil(($grid-gutter-width-pc / 2));
+    padding-right: floor(($grid-gutter-width-pc / 2));
+    @media (max-width: $screen-tb) {
+      padding-left:  ceil(($grid-gutter-width-tb / 2));
+      padding-right: floor(($grid-gutter-width-tb / 2));
+    }
+    @media (max-width: $screen-sp) {
+      padding-left:  ceil(($grid-gutter-width-sp / 2));
+      padding-right: floor(($grid-gutter-width-sp / 2));
+    }
   }
 }
 
@@ -94,29 +110,53 @@
 // グリッドを生成用mixin
 
 // 中央揃えのコンテナを生成
-@mixin container-fixed($gutter: $grid-gutter-width) {
+@mixin container-fixed() {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  floor(($gutter / 2));
-  padding-right: ceil(($gutter / 2));
+  padding-left:  floor(($gutter-pc / 2));
+  padding-right: ceil(($gutter-pc / 2));
   @include clearfix;
+  @media (max-width $screen-tb) {
+    padding-left: floor(($gutter-tb / 2));
+    padding-right: ceil(($gutter-tb / 2));
+  }
+  @media (max-width $screen-sp) {
+    padding-left: floor(($gutter-sp / 2));
+    padding-right: ceil(($gutter-sp / 2));
+  }
 }
 
 // カラムのラッパーを生成
-@mixin make-row($gutter: $grid-gutter-width) {
-  margin-left:  ceil(($gutter / -2));
-  margin-right: floor(($gutter / -2));
+@mixin make-row() {
+  margin-left:  ceil(($gutter-pc / -2));
+  margin-right: floor(($gutter-pc / -2));
   @include clearfix;
+  @media (max-width $screen-tb) {
+    padding-left: floor(($gutter-tb / 2));
+    padding-right: ceil(($gutter-tb / 2));
+  }
+  @media (max-width $screen-sp) {
+    padding-left: floor(($gutter-sp / 2));
+    padding-right: ceil(($gutter-sp / 2));
+  }
 }
 
 // PC用カラムの生成
-@mixin make-pc-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-pc-column($columns) {
   position: relative;
   float: left;
   width: percentage(($columns / $grid-columns));
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  padding-left:  ($gutter-pc / 2);
+  padding-right: ($gutter-pc / 2);
+  @media (max-width $screen-tb) {
+    padding-left: floor(($gutter-tb / 2));
+    padding-right: ceil(($gutter-tb / 2));
+  }
+  @media (max-width $screen-sp) {
+    padding-left: floor(($gutter-sp / 2));
+    padding-right: ceil(($gutter-sp / 2));
+  }
 }
 @mixin make-pc-column-offset($columns) {
   margin-left: percentage(($columns / $grid-columns));
@@ -129,12 +169,20 @@
 }
 
 // タブレット用カラムの生成
-@mixin make-tb-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-tb-column($columns) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
-
+  padding-left:  ($gutter-pc / 2);
+  padding-right: ($gutter-pc / 2);
+  @media (max-width $screen-tb) {
+    padding-left: floor(($gutter-tb / 2));
+    padding-right: ceil(($gutter-tb / 2));
+  }
+  @media (max-width $screen-sp) {
+    padding-left: floor(($gutter-sp / 2));
+    padding-right: ceil(($gutter-sp / 2));
+  }
+  
   @media (min-width: $screen-tb-min) {
     float: left;
     width: percentage(($columns / $grid-columns));
@@ -157,11 +205,19 @@
 }
 
 // スマートフォン用カラムの生成
-@mixin make-sp-column($columns, $gutter: $grid-gutter-width) {
+@mixin make-sp-column($columns) {
   position: relative;
   min-height: 1px;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
+  padding-left:  ($gutter-pc / 2);
+  padding-right: ($gutter-pc / 2);
+  @media (max-width $screen-tb) {
+    padding-left: floor(($gutter-tb / 2));
+    padding-right: ceil(($gutter-tb / 2));
+  }
+  @media (max-width $screen-sp) {
+    padding-left: floor(($gutter-sp / 2));
+    padding-right: ceil(($gutter-sp / 2));
+  }
 
   @media (min-width: $screen-sp-min) {
     float: left;

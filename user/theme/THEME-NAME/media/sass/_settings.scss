@@ -32,11 +32,17 @@ $base-font: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシ�
 // グリッドシステム設定
 // --------------------------------------------------
 
+$gutter-pc: 20px !default;
+$gutter-tb: $gutter-pc;
+$gutter-sp: 30px !default;
+
 // グリッドシステムカラムのそれぞれの間の余白
-$grid-gutter-width: 20px !default;
+$grid-gutter-width-pc: 20px !default;
+$grid-gutter-width-tb: 10px !default;
+$grid-gutter-width-sp: 10px !default;
 
 // コンテナ(.container)サイズ
-$container-pc: (960px + $grid-gutter-width) !default;
+$container-pc: (1000px + $grid-gutter-width-pc) !default;
 $container-tb: auto !default;
 $container-sp: auto !default;
 
