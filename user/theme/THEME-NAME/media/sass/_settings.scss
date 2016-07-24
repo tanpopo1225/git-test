@@ -9,7 +9,7 @@ $responsive: true;
 // LightCMS導入サイトかどうかの設定 - true/false
 $light-cms: true;
 
-// LightCMS使用時に設定
+// LightCMS使用時に設定 - CMSエディタ内幅指定
 $light-cms-column-width: 690px;
 
 // プレークポイント
@@ -34,13 +34,13 @@ $base-font: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシ�
 
 // コンテナ両サイドの余白
 $gutter-pc: 20px !default;
-$gutter-tb: $gutter-pc;
-$gutter-sp: 30px !default;
+$gutter-tb: 30px !default;
+$gutter-sp: $gutter-tb !default;
 
 // グリッドシステムカラムのそれぞれの間の余白
 $grid-gutter-width-pc: 20px !default;
 $grid-gutter-width-tb: 10px !default;
-$grid-gutter-width-sp: 10px !default;
+$grid-gutter-width-sp: $grid-gutter-width-tb !default;
 
 // コンテナ(.container)サイズ
 $container-pc: (1000px + $grid-gutter-width-pc) !default;
