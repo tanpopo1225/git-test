@@ -83,8 +83,8 @@ $(function() {
 });
 
 $(function() {
-    var menu = $('#slide_menu'), // スライドインするメニューを指定
-        menuBtn = $('.slide_menu_button'), // メニューボタンを指定
+    var menu = $('.slide-menu'), // スライドインするメニューを指定
+        menuBtn = $('slidemenu-btn'), // メニューボタンを指定
         body = $(document.body),
         menuWidth = menu.outerWidth();
 
