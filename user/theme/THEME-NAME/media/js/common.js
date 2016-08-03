@@ -84,7 +84,7 @@ $(function() {
 
 $(function() {
     var menu = $('.slide-menu'), // スライドインするメニューを指定
-        menuBtn = $('slidemenu-btn'), // メニューボタンを指定
+        menuBtn = $('.slidemenu-btn'), // メニューボタンを指定
         body = $(document.body),
         menuWidth = menu.outerWidth();
 
