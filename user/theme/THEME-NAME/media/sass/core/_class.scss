@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+// クリアフィックス
+.clearfix {
+  @include clearfix;
+}
+
 // pタグ同士の間の余白用クラス
 .mt1em {
   margin-top: 1em;
