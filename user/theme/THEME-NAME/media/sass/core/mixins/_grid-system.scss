@@ -174,11 +174,11 @@
   min-height: 1px;
   padding-left:  ($gutter-pc / 2);
   padding-right: ($gutter-pc / 2);
-  @media (max-width $screen-tb) {
+  @media (max-width: $screen-tb) {
     padding-left: floor(($gutter-tb / 2));
     padding-right: ceil(($gutter-tb / 2));
   }
-  @media (max-width $screen-sp) {
+  @media (max-width: $screen-sp) {
     padding-left: floor(($gutter-sp / 2));
     padding-right: ceil(($gutter-sp / 2));
   }
@@ -210,11 +210,11 @@
   min-height: 1px;
   padding-left:  ($gutter-pc / 2);
   padding-right: ($gutter-pc / 2);
-  @media (max-width $screen-tb) {
+  @media (max-width: $screen-tb) {
     padding-left: floor(($gutter-tb / 2));
     padding-right: ceil(($gutter-tb / 2));
   }
-  @media (max-width $screen-sp) {
+  @media (max-width: $screen-sp) {
     padding-left: floor(($gutter-sp / 2));
     padding-right: ceil(($gutter-sp / 2));
   }
