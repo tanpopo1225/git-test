@@ -107,9 +107,6 @@ $(function () {
                 'height': window.innerHeight,
                 'top': -top
             });
-            if (!fixed) {
-                menu.css('padding-top', $('header').height()-top);
-            }
             menu.animate({ 'right': 0 });
         } else {
             // open クラスが body についていなかったらスライドアウトする
