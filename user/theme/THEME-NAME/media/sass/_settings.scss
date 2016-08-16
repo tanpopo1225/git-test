@@ -6,6 +6,12 @@
 // レスポンシブサイトかどうかの設定 - true/false
 $responsive: true;
 
+// ヘッダー固定かどうかの設定 - true/false
+$header-fixed: false;
+
+// スマホのヘッダーの高さ(必須)
+$header-height: 60px;
+
 // LightCMS導入サイトかどうかの設定 - true/false
 $light-cms: true;
 
