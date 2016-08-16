@@ -8,6 +8,18 @@
 // Header
 // --------------------------------------------------
 header {
+  @media screen and (max-width: $screen-tb) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    @if $header-fixed {
+      position: fixed;
+    }
+    @else {
+      position: relative;
+    }
+  }
 }
 
 // --------------------------------------------------
