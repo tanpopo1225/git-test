@@ -82,32 +82,40 @@ $(function() {
     }
 });
 
-$(function() {
-    var menu = $('.slide-menu'), // スライドインするメニューを指定
+$(function () {
+    var menu = $('.slide-menu'),
         menuBtn = $('.slidemenu-btn'), // メニューボタンを指定
         body = $(document.body),
-        menuWidth = menu.outerWidth();
+        top = 0,
+        menu_open = false;
+
+    $(window).scroll(function () {
+        
+    });
 
     // メニューボタンをクリックした時の動き
-    menuBtn.on('click', function() {
+    menuBtn.on('click', function () {
+        if (!menu_open) {
+            top = body.scrollTop();
+        }
         // body に open クラスを付与する
         body.toggleClass('open');
+        menu_open = true;
         if (body.hasClass('open')) {
             // open クラスが body についていたらメニューをスライドインする
-            body.animate({
-                'right': menuWidth
-            }, 300);
-            menu.animate({
-                'right': 0
-            }, 300);
+            body.css({
+                'height': window.innerHeight,
+                'top': -top
+            });
+            if (!fixed) {
+                menu.css('padding-top', $('header').height()-top);
+            }
+            menu.animate({ 'right': 0 });
         } else {
             // open クラスが body についていなかったらスライドアウトする
-            menu.animate({
-                'right': -menuWidth
-            }, 300);
-            body.animate({
-                'right': 0
-            }, 300);
+            body.removeAttr('style').scrollTop(top);
+            menu.animate({'right': -body.width()});
+            menu_open = false;
         }
     });
 });
