@@ -88,10 +88,7 @@ $(function () {
         body = $(document.body),
         top = 0,
         menu_open = false;
-
-    $(window).scroll(function () {
-        
-    });
+    menu.hide();
 
     // メニューボタンをクリックした時の動き
     menuBtn.on('click', function () {
@@ -103,6 +100,7 @@ $(function () {
         menuBtn.toggleClass('active');
         menu_open = true;
         if (body.hasClass('open')) {
+            menu.show();
             // open クラスが body についていたらメニューをスライドインする
             body.css({
                 'height': window.innerHeight,
@@ -112,7 +110,7 @@ $(function () {
         } else {
             // open クラスが body についていなかったらスライドアウトする
             body.removeAttr('style').scrollTop(top);
-            menu.animate({'right': -body.width()});
+            menu.animate({'right': -body.width()},function(){menu.hide();});
             menu_open = false;
         }
     });
