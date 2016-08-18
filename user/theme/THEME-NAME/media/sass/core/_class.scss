@@ -54,6 +54,14 @@
   }
 }
 
+// フォント太さクラス
+.normal {
+  font-weight: normal;
+}
+.bold {
+  font-weight: bold;
+}
+
 // 余白クラスの生成
 @for $i from 0 through 20 {
   .mt#{$i} {
