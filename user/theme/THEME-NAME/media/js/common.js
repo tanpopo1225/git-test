@@ -11,6 +11,7 @@ var isiPhone = (UA.indexOf('iphone') > -1);
 var isAndroid = (UA.indexOf('android') > -1) && (UA.indexOf('mobile') > -1);
 
 function scrollPosition (position) {
+  position -= SP_FIXED ? $('header').height() : 0;
   $('html, body').animate({
     scrollTop: position
   }, SPEED);
