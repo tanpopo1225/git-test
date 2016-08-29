@@ -75,6 +75,7 @@ $(function () {
     }
     // body に open クラスを付与する
     body.toggleClass('open');
+    menuBtn.toggleClass('active');
     menu_open = true;
     if (body.hasClass('open')) {
       // open クラスが body についていたらメニューをスライドインする
