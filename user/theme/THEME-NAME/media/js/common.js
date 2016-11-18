@@ -27,7 +27,7 @@ $(function () {
 });
 
 
-// 一定量スクロールするとページトップに戻るが表示される（場所等の指定はcommon.cssにて）
+// 一定量スクロールするとページトップに戻るが表示される（場所等の指定はcommon.scssにて）
 $(function () {
   var top_btn = $('.pagetop');
   top_btn.hide();
