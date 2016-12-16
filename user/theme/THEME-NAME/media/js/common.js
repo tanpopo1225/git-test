@@ -1,4 +1,4 @@
-var SP_FIXED = true;
+var SP_FIXED = false;
 var SP_WIDTH = 769;
 var SPEED = 500;
 
@@ -10,8 +10,10 @@ var isiPhone = (UA.indexOf('iphone') > -1);
 // Android
 var isAndroid = (UA.indexOf('android') > -1) && (UA.indexOf('mobile') > -1);
 
-function scrollPosition (position) {
-  position -= SP_FIXED ? $('header').height() : 0;
+function scrollPosition(position) {
+  if ($(window).width() < SP_WIDTH) {
+    position -= SP_FIXED ? $('header').height() : 0;
+  }
   $('html, body').animate({
     scrollTop: position
   }, SPEED);
