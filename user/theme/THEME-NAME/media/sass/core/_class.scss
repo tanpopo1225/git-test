@@ -187,7 +187,7 @@ $n: 25;
     }
     $n: 25;
     @while $n <= 120 {
-      .tb-mt#{$n} {
+      .mt#{$n}-tb {
         margin-top: #{$n}px !important;
       }
       .mr#{$n}-tb {
