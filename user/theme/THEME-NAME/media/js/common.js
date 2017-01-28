@@ -19,7 +19,7 @@ const scroll = position => {
   }, SPEED);
 }
 
-//	（<a href="#top">の様に記述すると滑らかにスクロールする。）
+// （<a href="#top">の様に記述すると滑らかにスクロールする。）
 $(function () {
   $('a[href^="#"]').click(function () {
     let position = $(this.hash).length > 0 ? $(this.hash).offset().top : 0;
@@ -65,7 +65,7 @@ $(function () {
 
 //スライドメニューの動き
 $(function () {
-  let  menu_btn = $('.slidemenu-btn');
+  let menu_btn = $('.slidemenu-btn');
   let body = $(document.body);
   let top = 0;
   let menu_open = false;
