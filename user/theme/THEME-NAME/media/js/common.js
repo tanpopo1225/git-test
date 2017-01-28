@@ -19,7 +19,7 @@ function scrollPosition(position) {
   }, SPEED);
 }
 
-//	（<a href="#top">の様に記述すると滑らかにスクロールする。）
+//（<a href="#top">の様に記述すると滑らかにスクロールする。）
 $(function () {
   $('a[href^="#"]').click(function () {
     var position = $(this.hash).length > 0 ? $(this.hash).offset().top : 0;
@@ -27,7 +27,6 @@ $(function () {
     return false;
   });
 });
-
 
 // 一定量スクロールするとページトップに戻るが表示される（場所等の指定はcommon.scssにて）
 $(function () {
@@ -64,34 +63,25 @@ $(function () {
 });
 
 $(function () {
-  var menu = $('.slide-menu');
-  var menu_btn = $('.slidemenu-btn'); // メニューボタンを指定
+  var menu_btn = $('.slidemenu-btn');
   var body = $(document.body);
   var top = 0;
   var menu_open = false;
 
-  // メニューボタンをクリックした時の動き
   menu_btn.on('click', function () {
     if (!menu_open) {
       top = body.scrollTop();
     }
-    // body に open クラスを付与する
     body.toggleClass('open');
     menu_btn.toggleClass('active');
     menu_open = true;
     if (body.hasClass('open')) {
-      // open クラスが body についていたらメニューをスライドインする
       body.css({
         'height': window.innerHeight,
         'top': -top
       });
-      menu.animate({ 'right': 0 });
     } else {
-      // open クラスが body についていなかったらスライドアウトする
       body.removeAttr('style').scrollTop(top);
-      menu.animate({
-        'right': -body.width()
-      });
       menu_open = false;
     }
   });
