@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-@import 'mixins/clearfix';
+// 余白クラスの生成
+@include spaceloop();
+
+// 行揃え指定クラス
+@include textalign();
 
 // クリアフィックス
 .clearfix {
@@ -56,17 +60,6 @@
   margin-right: auto !important;
 }
 
-// 行揃え指定クラス
-.left-text{
-  text-align: left !important;
-}
-.right-text{
-  text-align: right !important;
-}
-.center-text{
-  text-align: center !important;
-}
-
 // フォントサイズクラスの生成
 @for $i from 8 through 40 {
   .f#{$i}px {
@@ -82,74 +75,13 @@
   font-weight: bold;
 }
 
-// 余白クラスの生成
-@for $i from 0 through 20 {
-  .mt#{$i} {
-    margin-top: #{$i}px !important;
-  }
-  .mr#{$i} {
-    margin-right: #{$i}px !important;
-  }
-  .mb#{$i} {
-    margin-bottom: #{$i}px !important;
-  }
-  .ml#{$i} {
-    margin-left: #{$i}px !important;
-  }
-  .pt#{$i} {
-    padding-top: #{$i}px !important;
-  }
-  .pr#{$i} {
-    padding-right: #{$i}px !important;
-  }
-  .pb#{$i} {
-    padding-bottom: #{$i}px !important;
-  }
-  .pl#{$i} {
-    padding-left: #{$i}px !important;
-  }
-}
-$n: 25;
-@while $n <= 120 {
-  .mt#{$n} {
-    margin-top: #{$n}px !important;
-  }
-  .mr#{$n} {
-    margin-right: #{$n}px !important;
-  }
-  .mb#{$n} {
-    margin-bottom: #{$n}px !important;
-  }
-  .ml#{$n} {
-    margin-left: #{$n}px !important;
-  }
-  .pt#{$n} {
-    padding-top: #{$n}px !important;
-  }
-  .pr#{$n} {
-    padding-right: #{$n}px !important;
-  }
-  .pb#{$n} {
-    padding-bottom: #{$n}px !important;
-  }
-  .pl#{$n} {
-    padding-left: #{$n}px !important;
-  }
-  $n: $n + 5;
-}
-
 @if $responsive {
   @media (max-width: $screen-tb) {
     // 行揃え指定クラス
-    .left-text-tb {
-      text-align: left !important;
-    }
-    .right-text-tb {
-      text-align: right !important;
-    }
-    .center-text-tb {
-      text-align: center !important;
-    }
+    @include textalign(-tb);
+
+    // タブレット用余白クラスの生成
+    @include spaceloop(-tb);
 
     // タブレット用フォントサイズクラスの生成
     @for $i from 8 through 40 {
@@ -157,137 +89,20 @@ $n: 25;
         font-size: #{$i}px !important;
       }
     }
-
-    // タブレット用余白クラスの生成
-    @for $i from 0 through 20 {
-      .mt#{$i}-tb {
-        margin-top: #{$i}px !important;
-      }
-      .mr#{$i}-tb {
-        margin-right: #{$i}px !important;
-      }
-      .mb#{$i}-tb {
-        margin-bottom: #{$i}px !important;
-      }
-      .ml#{$i}-tb {
-        margin-left: #{$i}px !important;
-      }
-      .pt#{$i}-tb {
-        padding-top: #{$i}px !important;
-      }
-      .pr#{$i}-tb {
-        padding-right: #{$i}px !important;
-      }
-      .pb#{$i}-tb {
-        padding-bottom: #{$i}px !important;
-      }
-      .pl#{$i}-tb {
-        padding-left: #{$i}px !important;
-      }
-    }
-    $n: 25;
-    @while $n <= 120 {
-      .mt#{$n}-tb {
-        margin-top: #{$n}px !important;
-      }
-      .mr#{$n}-tb {
-        margin-right: #{$n}px !important;
-      }
-      .mb#{$n}-tb {
-        margin-bottom: #{$n}px !important;
-      }
-      .ml#{$n}-tb {
-        margin-left: #{$n}px !important;
-      }
-      .pt#{$n}-tb {
-        padding-top: #{$n}px !important;
-      }
-      .pr#{$n}-tb {
-        padding-right: #{$n}px !important;
-      }
-      .pb#{$n}-tb {
-        padding-bottom: #{$n}px !important;
-      }
-      .pl#{$n}-tb {
-        padding-left: #{$n}px !important;
-      }
-      $n: $n + 5;
-    }
   }
 
   @media (max-width: $screen-sp) {
     // 行揃え指定クラス
-    .left-text-sp {
-      text-align: left !important;
-    }
-    .right-text-sp {
-      text-align: right !important;
-    }
-    .center-text-sp {
-      text-align: center !important;
-    }
+    @include textalign(-sp);
+
+    // スマホ用余白クラスの生成
+    @include spaceloop(-sp);
 
     // スマホ用フォントサイズクラスの生成
     @for $i from 8 through 40 {
       .f#{$i}px-sp {
         font-size: #{$i}px !important;
       }
-    }
-
-    // スマホ用余白クラスの生成
-    @for $i from 0 through 20 {
-      .mt#{$i}-sp {
-        margin-top: #{$i}px !important;
-      }
-      .mr#{$i}-sp {
-        margin-right: #{$i}px !important;
-      }
-      .mb#{$i}-sp {
-        margin-bottom: #{$i}px !important;
-      }
-      .ml#{$i}-sp {
-        margin-left: #{$i}px !important;
-      }
-      .pt#{$i}-sp {
-        padding-top: #{$i}px !important;
-      }
-      .pr#{$i}-sp {
-        padding-right: #{$i}px !important;
-      }
-      .pb#{$i}-sp {
-        padding-bottom: #{$i}px !important;
-      }
-      .pl#{$i}-sp {
-        padding-left: #{$i}px !important;
-      }
-    }
-    $n: 25;
-    @while $n <= 120 {
-      .mt#{$n}-sp {
-        margin-top: #{$n}px !important;
-      }
-      .mr#{$n}-sp {
-        margin-right: #{$n}px !important;
-      }
-      .mb#{$n}-sp {
-        margin-bottom: #{$n}px !important;
-      }
-      .ml#{$n}-sp {
-        margin-left: #{$n}px !important;
-      }
-      .pt#{$n}-sp {
-        padding-top: #{$n}px !important;
-      }
-      .pr#{$n}-sp {
-        padding-right: #{$n}px !important;
-      }
-      .pb#{$n}-sp {
-        padding-bottom: #{$n}px !important;
-      }
-      .pl#{$n}-sp {
-        padding-left: #{$n}px !important;
-      }
-      $n: $n + 5;
     }
   }
 
