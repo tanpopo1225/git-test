@@ -97,17 +97,17 @@
   // デバイスごとのディスプレイ指定クラス
   .pc {
     @media (max-width: $screen-tb) {
-        display: none;
+        display: none !important;
     }
   }
   .tb {
     @media (min-width: $screen-pc-min) {
-      display: none;
+      display: none !important;
     }
   }
   .sp {
     @media (min-width: $screen-tb-min) {
-      display: none;
+      display: none !important;
     }
   }
 }
