@@ -98,3 +98,19 @@ $align: left, right, center;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 );
   }
 }
+
+// リンクテキストの下線切り替え
+@mixin link() {
+  @if $link-underline {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @else {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
