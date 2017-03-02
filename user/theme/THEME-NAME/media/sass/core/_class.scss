@@ -9,6 +9,9 @@
 // フォントサイズクラス作成
 @include fontsize();
 
+// lineheightのクラス
+@include lineheight();
+
 // リンクテキストクラス作成
 .link {
   @if $link-underline {
@@ -97,6 +100,9 @@
 
     // タブレット用フォントサイズクラスの生成
     @include fontsize(-tb);
+
+    // タブレット用lineheightのクラス
+    @include lineheight(-tb);
   }
 
   @media (max-width: $screen-sp) {
@@ -107,7 +113,10 @@
     @include spaceloop(-sp);
 
     // スマホ用フォントサイズクラスの生成
-    @include fontsize(-sp)
+    @include fontsize(-sp);
+
+    // スマホ用lineheightのクラス
+    @include lineheight(-sp);
   }
 
   // デバイスごとのディスプレイ指定クラス
