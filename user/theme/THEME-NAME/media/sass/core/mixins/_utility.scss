@@ -99,6 +99,22 @@ $align: left, right, center;
   }
 }
 
+// リンクテキストの下線切り替え
+@mixin link() {
+  @if $link-underline {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @else {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // lineheightクラスの生成
 @mixin lineheight($sufix: "") {
   $i: 10;
