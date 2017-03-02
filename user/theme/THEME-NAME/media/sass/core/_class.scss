@@ -97,7 +97,7 @@
     @include spaceloop(-sp);
 
     // スマホ用フォントサイズクラスの生成
-    @include fontsize(-sp)
+    @include fontsize(-sp);
 
     // スマホ用lineheightのクラス
     @include lineheight(-sp);
