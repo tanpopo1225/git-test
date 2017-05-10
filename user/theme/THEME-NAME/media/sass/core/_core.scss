@@ -101,9 +101,13 @@ hr {
 }
 
 select {
+  height: 30px;
   color: inherit;
   font: inherit;
+  font-size:14px !important;
   margin: 0;
+  padding: 0 20px 0 5px;
+  line-height:1;
 }
 
 button,
