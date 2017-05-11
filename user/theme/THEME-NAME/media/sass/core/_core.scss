@@ -113,7 +113,6 @@ select {
 button,
 input,
 textarea {
-  -webkit-appearance: none;
   color: inherit;
   font: inherit;
   margin: 0;
@@ -121,6 +120,12 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+button {
+  -webkit-appearance: none;
 }
 
 input {
